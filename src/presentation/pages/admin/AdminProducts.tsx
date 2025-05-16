@@ -58,7 +58,7 @@ export const Products = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/foods/all');
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/foods/all`);
       const data = await res.json();
       setProducts(data);
     } catch (error) {
@@ -79,8 +79,8 @@ export const Products = () => {
         )}`;
 
       const url = query
-        ? `http://localhost:3000/api/foods/filter?${query}`
-        : `http://localhost:3000/api/foods/all`;
+        ? `${import.meta.env.VITE_API_URL}/api/foods/filter?${query}`
+        : `${import.meta.env.VITE_API_URL}/api/foods/all`;
 
       const res = await fetch(url);
       const data = await res.json();
@@ -338,7 +338,9 @@ export const Products = () => {
           onDeleteConfirm={async () => {
             try {
               await fetch(
-                `http://localhost:3000/api/foods/${selectedProduct!.id}`,
+                `${import.meta.env.VITE_API_URL}/api/foods/${
+                  selectedProduct!.id
+                }`,
                 {
                   method: 'DELETE',
                 }

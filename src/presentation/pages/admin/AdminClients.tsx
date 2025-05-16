@@ -55,7 +55,9 @@ export const Clients = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/users/clients/all');
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/users/clients/all`
+      );
       const data = await res.json();
       setClients(data);
     } catch (error) {
@@ -74,8 +76,8 @@ export const Clients = () => {
         )}`;
 
       const url = query
-        ? `http://localhost:3000/api/users/filter?${query}`
-        : `http://localhost:3000/api/users/clients/all`;
+        ? `${import.meta.env.VITE_API_URL}/api/users/filter?${query}`
+        : `${import.meta.env.VITE_API_URL}/api/users/clients/all`;
 
       const res = await fetch(url);
       const data = await res.json();
@@ -280,7 +282,9 @@ export const Clients = () => {
           onDeleteConfirm={async () => {
             try {
               await fetch(
-                `http://localhost:3000/api/users/${selectedClient!.id}`,
+                `${import.meta.env.VITE_API_URL}/api/users/${
+                  selectedClient!.id
+                }`,
                 {
                   method: 'DELETE',
                 }

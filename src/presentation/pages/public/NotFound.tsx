@@ -3,7 +3,7 @@ import { HamburgerIcon } from '../../components/icons/HamburgerIcon';
 
 export default function NotFound() {
   return (
-    <main className="max-w-6xl w-full mx-auto px-8 overflow-hidden flex flex-col gap-8 md:flex-row">
+    <main className="max-w-6xl w-full mx-auto px-12 overflow-hidden flex flex-col gap-8 md:flex-row">
       <section className="w-full md:w-1/2 flex items-center justify-center">
         <HamburgerIcon className="[stroke-dasharray:300] [stroke-dashoffset:300] animate-[dash_4s_alternate_infinite]" />
       </section>

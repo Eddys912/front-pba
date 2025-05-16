@@ -226,7 +226,7 @@ export const AdminHeader = () => {
                 className="px-4 py-3 rounded-xl hover:bg-teal-700 hover:text-white transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Usuarios
+                Clientes
               </Link>
             )}
             {(isAdmin || canAccessEmployees) && (
