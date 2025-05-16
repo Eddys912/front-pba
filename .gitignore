@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+**/.env
+*.local
+
+# Build files
+/dist/
+/build/
+dist/
+dist-ssr/
+
+# Logs
+/logs/
+/debug.log
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# Temporary files
+frontend/.cache/
+
+# Coverage reports
+/coverage/
+
+# Editor and OS-specific files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
