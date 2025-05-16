@@ -139,7 +139,7 @@ export const Login: React.FC = () => {
           </button>
 
           {/* Enlace para Registro */}
-          <footer className="text-center">
+          <footer className="pt-8 text-center">
             <p className="text-sm text-gray-600">
               ¿No tienes una cuenta?{' '}
               <a
