@@ -31,10 +31,10 @@ export const Employees = () => {
   // Cálculo de productos paginados
   const indexOfLastProduct = currentPage * employeesPerPage;
   const indexOfFirstProduct = indexOfLastProduct - employeesPerPage;
-  const currentEmployees = employees.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
+  const currentEmployees = Array.isArray(employees)
+    ? employees.slice(indexOfFirstProduct, indexOfLastProduct)
+    : [];
+
   const totalPages = Math.ceil(employees.length / employeesPerPage);
 
   const closeModal = () => {

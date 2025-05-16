@@ -28,7 +28,9 @@ export const Clients = () => {
   // Cálculo de productos paginados
   const indexOfLastProduct = currentPage * clientsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - clientsPerPage;
-  const currentClients = clients.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentClients = Array.isArray(clients)
+    ? clients.slice(indexOfFirstProduct, indexOfLastProduct)
+    : [];
   const totalPages = Math.ceil(clients.length / clientsPerPage);
 
   const closeModal = () => {
