@@ -222,7 +222,7 @@ export const AdminHeader = () => {
             )}
             {(isAdmin || canAccessUsers) && (
               <Link
-                to="/admin/users"
+                to="/admin/clients"
                 className="px-4 py-3 rounded-xl hover:bg-teal-700 hover:text-white transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
